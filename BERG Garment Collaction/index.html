@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop BERG Garment Collection streetwear, tees, hoodies, tracksuits and accessories. Find Comfort At Yo' Peak.">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BERG Garment Collection | Find Comfort At Yo' Peak">
+  <meta property="og:description" content="Modern BERG streetwear focused on comfort, confidence, quality and individual style.">
+  <meta property="og:image" content="images/berg-logo-new.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BERG Garment Collection | Find Comfort At Yo' Peak">
+  <meta name="twitter:description" content="Modern BERG streetwear focused on comfort, confidence, quality and individual style.">
+  <link rel="icon" type="image/png" href="images/berg-logo-new.png">
+  <link rel="apple-touch-icon" href="images/berg-logo-new.png">
+  <title>BERG Garment Collection | Premium Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="BERG home">
+      <span class="brand-name">BERG</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-button" id="cartButton" type="button" aria-label="Open shopping cart">
+        Cart <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="images/couples.jpg" alt="">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">BERG GARMENT COLLECTION</p>
+        <h1 id="hero-title">FIND COMFORT<br><em>AT YO’ PEAK.</em></h1>
+        <p class="hero-text">Elevated streetwear. Everyday comfort. Your own peak.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#shop">SHOP THE COLLECTION <span aria-hidden="true">→</span></a>
+          <a class="button button-ghost" href="#about">DISCOVER BERG</a>
+        </div>
+      </div>
+      <div class="hero-badge" aria-label="Premium essentials">Premium essentials</div>
+    </section>
+
+    <section class="feature-strip" aria-label="BERG brand values">
+      <div>
+        <span>Comfort-first</span>
+        <strong>Built to move with you</strong>
+      </div>
+      <div>
+        <span>Editorial silhouettes</span>
+        <strong>Clean fits with intention</strong>
+      </div>
+      <div>
+        <span>Daily confidence</span>
+        <strong>Streetwear for your own peak</strong>
+      </div>
+    </section>
+
+    <section class="featured-set" aria-labelledby="reflective-heading">
+      <div class="featured-set-copy">
+        <p class="eyebrow">BERG / FEATURED OUTFIT</p>
+        <h2 id="reflective-heading">REFLECTIVE<br><em>SET</em></h2>
+        <p>Built to stand out. Designed for comfort.</p>
+        <a class="button button-light" href="#shop">SHOP NOW <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="featured-set-images" aria-label="Reflective BERG tracksuit campaign images">
+        <div class="featured-set-image"><img src="images/reflective-1.jpg" alt="Grey reflective BERG tracksuit look"></div>
+        <div class="featured-set-image"><img src="images/reflective-2.jpg" alt="Grey reflective BERG tracksuit detail"></div>
+      </div>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow" id="dropCountLabel">THE CURRENT DROP</p>
+          <h2>Wear your<br><em>own altitude.</em></h2>
+        </div>
+        <p class="section-note" id="sectionNote">The current collection.<br>One unmistakable attitude.</p>
+      </div>
+
+      <div class="shop-toolbar">
+        <label class="search-wrap" for="searchInput">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search the collection" autocomplete="off">
+        </label>
+        <p id="resultCount" aria-live="polite">Loading collection</p>
+      </div>
+
+      <div class="category-filter" role="group" aria-label="Shop categories">
+        <button class="category-button active" type="button" data-category="All Products">All Products</button>
+        <button class="category-button" type="button" data-category="T-Shirts">T-Shirts</button>
+        <button class="category-button" type="button" data-category="Hoodies">Hoodies</button>
+        <button class="category-button" type="button" data-category="Tracksuits">Tracksuits</button>
+        <button class="category-button" type="button" data-category="Windbreakers">Windbreakers</button>
+        <button class="category-button" type="button" data-category="Accessories">Accessories</button>
+        <button class="category-button" type="button" data-category="Sale">Sale</button>
+        <button class="category-button" type="button" data-category="New Arrivals">New Arrivals</button>
+      </div>
+
+      <div class="products" id="products"></div>
+      <p class="empty-state" id="emptyState" hidden>No pieces match that search.</p>
+    </section>
+
+    <section class="story section" id="about">
+      <div class="story-visual" aria-label="BERG T-shirt silhouette campaign image">
+        <img src="images/hero-1.jpg" alt="BERG garment collection lifestyle shoot">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">THE BERG STANDARD</p>
+        <h2>MORE THAN<br><em>WHAT YOU WEAR.</em></h2>
+        <p>BERG represents comfort, individuality and the confidence to reach your own peak.</p>
+        <p>Designed for everyday movement, unmistakable presence and the kind of ease that feels as good as it looks.</p>
+        <div class="story-quote">Find Comfort At Yo’ Peak.</div>
+      </div>
+    </section>
+
+    <section class="trust section" aria-labelledby="trust-title">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">BERG / CUSTOMER EXPERIENCE</p>
+          <h2 id="trust-title">Order with<br><em>confidence.</em></h2>
+        </div>
+      </div>
+
+      <div class="trust-grid">
+        <article class="trust-card">
+          <div class="trust-icon">01</div>
+          <h3>How to order</h3>
+          <p>Choose your piece, select a size and colour, then add it to your cart. The cart calculates the delivery fee based on your selected location.</p>
+        </article>
+        <article class="trust-card">
+          <div class="trust-icon">02</div>
+          <h3>Payment</h3>
+          <p>Payment arrangements are confirmed directly with BERG before the order is finalised. Do not send payment details through a public channel.</p>
+        </article>
+        <article class="trust-card">
+          <div class="trust-icon">03</div>
+          <h3>Delivery</h3>
+          <p>Delivery is charged based on the selected location in the cart: Gauteng — R60 and Outside Gauteng — R150.</p>
+        </article>
+        <article class="trust-card">
+          <div class="trust-icon">04</div>
+          <h3>Returns &amp; support</h3>
+          <p>Questions about returns, exchanges, sizing or your order can be discussed on WhatsApp or by phone with BERG.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Keep in<br><em>contact.</em></h2>
+      </div>
+      <div class="contact-links">
+        <a href="tel:+27818425151"><span>Phone</span>081 842 5151 <b>→</b></a>
+        <a href="https://wa.me/27818425151" target="_blank" rel="noopener"><span>WhatsApp</span>Message BERG <b>→</b></a>
+      </div>
+    </section>
+
+    <section class="faq section" aria-labelledby="faq-title">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">BERG / FAQ</p>
+          <h2 id="faq-title">Frequently asked<br><em>questions.</em></h2>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>How do I place an order?</summary>
+          <p>Choose your item, select a size and colour, then add it to your cart. Once you are happy with the selection, choose your delivery location and complete checkout via WhatsApp.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I order through WhatsApp?</summary>
+          <p>Use the WhatsApp link in the site or the product details panel, then send the selected product name, price, size and colour. BERG will confirm the order and payment arrangements directly.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What payment methods are available?</summary>
+          <p>Payment arrangements are confirmed directly with BERG before the order is finalised. Do not send payment details through an unofficial or public channel.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What delivery options and delivery times are available?</summary>
+          <p>Delivery is calculated in the cart based on your selected location: Gauteng — R60 and Outside Gauteng — R150. No exact delivery time is promised unless BERG confirms it separately.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is your returns and exchanges policy?</summary>
+          <p>Returns and exchanges are handled according to BERG’s returns information. Please review the returns page or contact BERG directly for item-specific guidance.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I choose the right clothing size?</summary>
+          <p>If you are unsure about sizing, contact BERG on WhatsApp or phone before placing the order to confirm the best fit. BERG does not currently publish a confirmed size guide on this site.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="images/berg-logo-transparent.png" alt="BERG logo">
+      <p>BERG Garment Collection</p>
+    </div>
+
+    <div class="footer-tagline">Find Comfort At Yo’ Peak.</div>
+
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="delivery.html">Delivery</a>
+      <a href="returns.html">Returns &amp; Exchanges</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="footer-meta">
+      <span>© <span data-current-year></span> BERG Garment Collection</span>
+      <a href="https://wa.me/27818425151" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="productModal" hidden>
+    <article class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+      <button class="icon-button close-button" id="closeProduct" type="button" aria-label="Close product details">×</button>
+      <div class="modal-image">
+        <img id="modalProductImage" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <p class="eyebrow">BERG / DETAIL</p>
+        <h2 id="modalProductName"></h2>
+        <p class="modal-description" id="modalProductDescription"></p>
+        <strong class="modal-price" id="modalProductPrice"></strong>
+        <div class="option-block">
+          <label>Colour <span id="selectedColorLabel"></span></label>
+          <div class="color-options" id="colorOptions"></div>
+        </div>
+        <div class="option-block">
+          <label>Size <span id="selectedSizeLabel"></span></label>
+          <div class="size-options" id="sizeOptions"></div>
+        </div>
+        <div class="option-block">
+          <label for="quantityInput">Quantity</label>
+          <div class="quantity-control">
+            <button id="decreaseQuantity" type="button" aria-label="Decrease quantity">−</button>
+            <input id="quantityInput" type="number" min="1" value="1">
+            <button id="increaseQuantity" type="button" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="button button-dark add-button" id="addToCart" type="button">ADD TO CART <span aria-hidden="true">→</span></button>
+          <button class="button order-whatsapp-button" id="orderOnWhatsApp" type="button">ORDER ON WHATSAPP <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">YOUR SELECTION</p>
+          <h2 id="cartTitle">Shopping cart</h2>
+        </div>
+        <button class="icon-button" id="closeCart" type="button" aria-label="Close shopping cart">×</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-footer">
+        <label class="delivery-field" for="deliveryLocation">
+          Delivery location
+          <select id="deliveryLocation">
+            <option value="">Choose location</option>
+            <option value="Gauteng">Gauteng — R60</option>
+            <option value="Outside Gauteng">Outside Gauteng — R150</option>
+          </select>
+        </label>
+
+        <div class="cart-summary">
+          <div><span>Subtotal</span><strong id="cartSubtotal">R0</strong></div>
+          <div><span>Delivery</span><strong id="cartDelivery">R0</strong></div>
+          <div class="cart-total"><span>Total</span><strong id="cartTotal">R0</strong></div>
+        </div>
+
+        <button class="clear-cart" id="clearCart" type="button">Clear cart</button>
+        <button class="button button-dark checkout-button" id="checkoutButton" type="button">CHECK OUT ON WHATSAPP <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>
